@@ -1,2 +1,2 @@
-# factors
-An open source tool for making factor based mathemtics easier
+# Project Factors
+An open source tool for making factor based mathematics easier
