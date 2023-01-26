@@ -13,37 +13,38 @@
         margin: auto;
     }
 
+    input:disabled{
+        opacity: 0.6;
+        cursor: not-allowed;
+        background-color: #252A34;
+        color: #5B8FB9;
+        border-radius: 14px;
+    }
+
     input{
         border-style: double;
         background-color: #5B8FB9;
         color:  #252A34;
-        padding: 10px 20px;
+        padding: 7px 15px;
         font-size: 20px;
         border-color: #EAEAEA;
         transition-duration: 0.3s;
-        border-radius: 12px;
+        border-radius: 8px;
         display: block;
     }
 
     input:hover {
         background-color: #252A34;
         color: #5B8FB9;
-        padding: 10px 20px;
         font-size: 20px;
-        border-color: #EAEAEA;
         transition-duration: 0.3s;
-        border-radius: 12px;
+        border-radius: 14px;
     }
 
     input:active{
         border-style: double;
-        background-color: #5B8FB9;
         color: #252A34;
-        padding: 10px 20px;
-        font-size: 20px;
-        border-color: #EAEAEA;
-        transition-duration: 0.3s;
-        border-radius: 12px;
+        border-radius: 8px;
     }
     body {
         min-height: 100vh;
@@ -58,13 +59,13 @@
 <script src = 'app.js'></script>
 
 
-<body>
+<body onclick = 'update()'>
 <div>
     <h1 style = '
         color: #EAEAEA;
         text-align: center;
         font-size: 30px;
-        border-color: white;'><u>Factors ;</u></h1>
+        border-color: white;'><u>Factors</u> ;</h1>
 
     <div style = 'padding: 25px 0px;'> </div>
 
@@ -85,7 +86,7 @@
     </div>
 
 
-    <table onclick = 'update()'>
+    <table>
         <tr>
             <td><input type = 'button' value = '1' onclick = 'add_digits(1)' ></td>
             <td><input type = 'button' value = '2' onclick = 'add_digits(2)' ></td>
@@ -112,13 +113,16 @@
 
 
 <div style = 'float: left' >
-    <input  type = 'button' value = 'Remove number' onclick = 'remove_number(), update()' >
-    <input type = 'button' value = 'Remove all numbers' onclick = 'remove_all_numbers(), update()' >
     <input type = 'button' value = 'Remove a digit' onclick = 'remove_digit(), update()' >
+    <input  type = 'button' value = 'Remove a number' onclick = 'remove_number(), update()' >
+    <input type = 'button' value = 'Remove all numbers' onclick = 'remove_all_numbers(), update()' >
     <input type = 'button' value = 'Add a new number' onclick = 'add_numbers(), update()' >
-    <input type = 'button' value = 'Find Lowest Common Factor' onclick = 'show_lowest_common_factor()' >
-    <input type = 'button' value = 'Find Factors' onclick = 'show_factors()' >
-    <input type = 'button' value = 'Find Prime Factors' onclick = 'show_prime_factors()' >
+    <div style = 'padding: 10px 0px;'> </div>
+    <input id = 'factors' type = 'button' value = 'Find Factors' onclick = 'show_factors()' >
+    <input id = 'prime_factors' type = 'button' value = 'Find Prime Factors' onclick = 'show_prime_factors()' >
+    <input id = 'lowest_common_factor' type = 'button' value = 'Find Lowest Common Factor' onclick = 'show_lowest_common_factor()'  disabled>
+    <input id = 'highest_common_factor' type = 'button' value = 'Find Highest Common Factor' onclick = 'show_highest_common_factor()' disabled>
+
 </div>
     <div style = 'padding: 180px 0px;'> </div>
 

@@ -1,7 +1,7 @@
 function is_prime(number) {
     let prime = true
     for (let i = 2; i < number - 1; i++) {
-        if (number % i == 0){
+        if (number % i/2 == 0){
             prime = false;
         }
     }
@@ -167,17 +167,71 @@ function find_lowest_common_factor(numbers){
 
     return lowest_common_factor
 }
+function find_highest_common_factor(numbers) {
+    let hcf
+
+    let two_divider = (number) => {
+        let result
+        let quotient
+        let new_dividend
+        let hcf
 
 
-/*
-later
-gcd = [8,14,6] // 56
+        let divider = num => {
+            let divisor, dividend
 
-let som = 1
-for (let i = 0; i < gcd.length; i++) {
-     som *= gcd[i]
+            if (num[0] < num[1]) {
+                divisor = num[0]
+                dividend = num[1]
+            } else {
+                divisor = num[1]
+                dividend = num[0]
+            }
+            new_dividend = divisor
+
+            // multiplication value part
+
+            for (let i = 1; i < i + 1; i++) {
+                if (divisor * i > dividend) {
+                    divisor = divisor * (i - 1)
+                    quotient = i - 1
+                    break
+                } else if (divisor * i == dividend) {
+                    divisor = divisor * i
+                    quotient = i - 1
+                    break
+                }
+            }
+
+            // minus part
+            result = dividend - divisor
+
+
+            if (result != 0) {
+                divider([new_dividend, result])
+            } else {
+                hcf = new_dividend
+            }
+        }
+
+        divider([number[0], number[1]])
+        return hcf
+
+    }
+    let curr_hcf
+
+    if (numbers.length == 2) {
+        hcf = two_divider(numbers)
+    }else {
+        curr_hcf = two_divider([numbers[0], numbers[1]])
+        numbers.splice(0, 2)
+
+        while (numbers.length != 0) {
+            curr_hcf = two_divider([numbers[0], curr_hcf])
+            numbers.splice(0, 1)
+        }
+    }
+
+    return curr_hcf
 }
-gcd2 = som / find_lowest_common_factor(gcd)
 
-
-console.log(gcd2) // 2*/
