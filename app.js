@@ -53,7 +53,6 @@ function show_highest_common_factor() {
     element.textContent =  find_highest_common_factor(hcf).toString()
 }
 
-
 function update() {
     let display_numbers = []
 
@@ -107,6 +106,4 @@ function buttons_control() {
         lowest_common_factor.disabled = true
         highest_common_factor.disabled = true
     }
-
 }
-

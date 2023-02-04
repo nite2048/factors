@@ -234,4 +234,3 @@ function find_highest_common_factor(numbers) {
 
     return curr_hcf
 }
-
