@@ -105,5 +105,6 @@ function buttons_control() {
         prime_factors.disabled = true
         lowest_common_factor.disabled = true
         highest_common_factor.disabled = true
+        highest_common_factor.disabled = true
     }
 }
