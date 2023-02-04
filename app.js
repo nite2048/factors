@@ -102,7 +102,7 @@ function buttons_control() {
         highest_common_factor.disabled = true
     }
     if (numbers.length == 0){
-        factors.disabled = false
+        factors.disabled = true
         prime_factors.disabled = true
         lowest_common_factor.disabled = true
         highest_common_factor.disabled = true
