@@ -176,7 +176,6 @@ function find_highest_common_factor(numbers) {
         let new_dividend
         let hcf
 
-
         let divider = num => {
             let divisor, dividend
 
@@ -221,7 +220,7 @@ function find_highest_common_factor(numbers) {
     let curr_hcf
 
     if (numbers.length == 2) {
-        hcf = two_divider(numbers)
+        curr_hcf = two_divider(numbers)
     }else {
         curr_hcf = two_divider([numbers[0], numbers[1]])
         numbers.splice(0, 2)
