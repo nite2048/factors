@@ -15,8 +15,8 @@ find_factors(number)
 find_prime_factors(number)
 
 // find the highest and the lowest common factor of a number
-find_highest_common_factor(number)
-find_lowest_common_factor(number)
+find_highest_common_factor([number,number])
+find_lowest_common_factor([number,number])
 ```
 
 ## Contributing
