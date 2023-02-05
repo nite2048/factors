@@ -4,7 +4,7 @@
 ## Usage
 The tool is hosted using GitHub Pages https://nite2048.github.io/factors/.
 
-However, the [library file](project/factors.js) contains the source code for the operations which can be used independently.
+However, the [library](factors.js) contains the source code for the operations which can be used independently.
 
 ```js
 // check if the number is prime
