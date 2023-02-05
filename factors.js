@@ -168,8 +168,6 @@ function find_lowest_common_factor(numbers){
     return lowest_common_factor
 }
 function find_highest_common_factor(numbers) {
-    let hcf
-
     let two_divider = (number) => {
         let result
         let quotient
